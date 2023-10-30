@@ -98,14 +98,20 @@ void Graph::depthTraversal(int start)
 	}
 }
 
-int Graph::returnVertices()
+void Graph::returnVertices()
 {
-	return numVertices;
+	cout << numVertices << endl;
 }
 
-int Graph::returnEdges()
+void Graph::returnEdges()
 {
-	return 1;
+	int edge = 0;
+	for (int i = 0; i < numVertices; ++i)
+	{
+		edge += adjList[i].size();
+	}
+	cout << edge << endl;
+
 }
 
 int Graph::size()

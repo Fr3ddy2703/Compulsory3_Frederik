@@ -59,6 +59,15 @@ void Tree::setRoot(Node* root)
 	treeroot = root;
 }
 
+void Tree::getNodes(vector<Node*>& vector, Node* node)
+{
+	for (int i = 0; i < node->children.size(); i++)
+	{
+		getNodes(vector, node->children[i]);
+	} 
+        vector.emplace_back(node);
+}
+
 void Tree::insertNode(Node* root, int data)
 {
 	//cout << "New node added" << endl;
@@ -66,18 +75,6 @@ void Tree::insertNode(Node* root, int data)
 	
 }
 
-void Tree::insertRandomNode(Node* root, int data)
-{
-	random_device rand;
-	mt19937 gen(rand());
-	uniform_int_distribution<int> dis(1, 100);
-
-	int random = dis(gen);
-	
-    cout << "New node randomly added" << endl;
-
-    newNode(random, root);
-}
 
 void Tree::deleteNode(Node* root)
 {
@@ -160,6 +157,29 @@ bool Tree::isLeaf(Node* leaf)
 	return false;
 }
 
+Tree::Node* Tree::createRandomChild(Node* root, int RandomNumber)
+{
+	 srand(time(NULL));
+
+        if (root == nullptr)
+        {
+            root = newNode(rand(), nullptr);
+            RandomNumber--;
+        }
+
+        vector<Node*> tempVector = getTree(root);
+        Node* tempNode;
+        Node* tempnewNode;
+        for (int i = 0; i < RandomNumber; i++)
+        {
+            tempNode = tempVector[rand() % tempVector.size()];
+            tempnewNode = newNode(rand(), tempNode);
+            tempVector.emplace_back(tempnewNode);
+        }
+
+        return root;
+}
+
 Tree::Node* Tree::returnRoot()
 {
 	cout << treeroot->data << endl;
@@ -179,5 +199,21 @@ vector<Tree::Node*> Tree::returnChildren(Node* children)
 		cout << children->children[i]->data << endl;
 	}
 	return children->children;
+}
+
+vector<Tree::Node*> Tree::getTree(Node* node)
+{
+	vector<Node*> tempVector;
+
+        if (node != nullptr)
+        {
+            getNodes(tempVector, node);
+
+            return tempVector;
+        }
+
+        tempVector.emplace_back(node);
+
+        return tempVector;
 }
 

@@ -1,4 +1,8 @@
 ﻿  graph.cpp
 C:\Algoritmer og Datastruktur\GitHub\Algoritmer-Datastruk\Compulsory3_Frederik\Compulsory3_Trees_Graphs\Compulsory3_Trees_Graphs\graph.cpp(23,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Algoritmer og Datastruktur\GitHub\Algoritmer-Datastruk\Compulsory3_Frederik\Compulsory3_Trees_Graphs\Compulsory3_Trees_Graphs\graph.cpp(138): warning C4715: 'Graph::isConnected': not all control paths return a value
+C:\Algoritmer og Datastruktur\GitHub\Algoritmer-Datastruk\Compulsory3_Frederik\Compulsory3_Trees_Graphs\Compulsory3_Trees_Graphs\graph.cpp(111,26): warning C4267: '+=': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+C:\Algoritmer og Datastruktur\GitHub\Algoritmer-Datastruk\Compulsory3_Frederik\Compulsory3_Trees_Graphs\Compulsory3_Trees_Graphs\main.cpp(10,7): warning C4101: 'tree': unreferenced local variable
+  Generating Code...
+C:\Algoritmer og Datastruktur\GitHub\Algoritmer-Datastruk\Compulsory3_Frederik\Compulsory3_Trees_Graphs\Compulsory3_Trees_Graphs\graph.cpp(144): warning C4715: 'Graph::isConnected': not all control paths return a value
   Compulsory3_Trees_Graphs.vcxproj -> C:\Algoritmer og Datastruktur\GitHub\Algoritmer-Datastruk\Compulsory3_Frederik\Compulsory3_Trees_Graphs\x64\Debug\Compulsory3_Trees_Graphs.exe

@@ -28,8 +28,8 @@ void DeletingNode(Node *root);
 public:
 
 void setRoot(Node *root);
+void getNodes(vector<Node*>& vector, Node* node);
 void insertNode(Node *root, int data);
-void insertRandomNode(Node *root, int data);
 void deleteNode(Node *root);	
 void LevelOrderTraversal(Node *root);
 int size(Node * root);
@@ -37,9 +37,12 @@ int depth(Node *root);
 bool isEmpty(Node * root);
 bool isRoot(Node *root);
 bool isLeaf(Node *leaf);
+Node* createRandomChild(Node* root, int RandomNumber);
 Node* returnRoot();
 Node* returnParent(Node *parent);
 vector<Node*> returnChildren(Node *children);
+vector<Node*> getTree(Node* node);
+
 
 Node *treeroot;
 

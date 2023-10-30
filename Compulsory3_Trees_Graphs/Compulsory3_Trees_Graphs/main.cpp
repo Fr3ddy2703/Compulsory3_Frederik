@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-	/*Tree tree;*/
+	Tree tree;
 	
 	Graph graph(5);
 	graph.addEdge(0, 1);
@@ -21,26 +21,16 @@ int main()
 	
 
 
-	graph.returnVertices();
+	graph.returnEdges();
 
-	graph.print();
+	//graph.print();
 
+
+
+	//Tree::Node *root = tree.createRandomChild(nullptr, 53);
+	//cout << tree.size(root) << endl;
+	//cout << root->children.size() << endl;
 
 	return 0;
-
-	//Tree::Node *root = tree.newNode(10, nullptr);
-	//tree.insertNode(root, 20);
-	//tree.insertNode(root, 30);
-	//tree.insertNode(root, 40);
-	//tree.insertNode(root->children[0], 123);
-	//tree.insertNode(root->children[1], 153);
-	//tree.insertNode(root->children[2], 31);
-	//tree.insertNode(root->children[0]->children[0], 3);
-	//tree.insertNode(root->children[0]->children[0], 53);
-	//tree.insertNode(root->children[0]->children[0]->children[0], 37);
-	//tree.insertNode(root->children[0]->children[0]->children[1], 83);
-	//int input;
-
-
-	//tree.setRoot(root);
+	
 }
